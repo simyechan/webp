@@ -91,5 +91,60 @@
 
     </fieldset>
   </form>
+  <form>
+    <fieldset>
+      <legend>배송 정보</legend>
+      <ul id="shipping">
+        <li>
+          <label for="user-name">이름</label>
+          <input type="text" id="user-name" autofocus readonly>
+        </li>
+        <li>
+          <label for="add">배송 주소</label>
+          <input type="text" id="add" required>
+        </li>
+        <li>
+          <label for="em">이메일</label>
+          <input type="email" id="em">
+        </li>
+        <li>
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)">
+        </li>
+        <li>
+          <label for="day">배송 지정</label>
+          <input type="date" id="day"><small> 주문일로 부터 최소 3일 이후</small>
+        </li>
+        <li>
+          <label for="memo">메모</label>
+          <textarea id="memo" cols="40" rows="4"></textarea>
+        </li>
+        <li>
+          <label for="상품선택"></label>
+          <select id="상품선택">
+            <option value="값1">선물용 10kg</option>
+            <option value="값2">선물용 5kg</option>
+            <option value="값2" selected>선물용 3kg</option>
+          </select>
+        </li>
+        <li>
+          <input type="test" list="데이터 목록 id">
+          <datalist id="데이터 목록 id">
+            <option value="서버로 넘길 값1">선택 옵션1</option>
+            <option value="서버로 넘길 값2">선택 옵션2</option>
+          </datalist>
+        </li>
+        <li>
+          <button type="submit">내용</button>
+          <button type="reset">내용</button>
+          <button type="button">내용</button>
+        </li>
+      </ul>
+        <div id="buttons">
+        <input type="submit" value="주문하기">
+        <input type="reset" value="취소하기">
+      </div>
+    </fieldset>
+  </form>
 </body>
 </html>
