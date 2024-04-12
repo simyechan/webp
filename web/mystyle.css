@@ -1,0 +1,13 @@
+#bg {
+  color: white;
+  background-color: black;
+  width: 180px;
+}
+.b {
+  width: 350px;
+  height: 250px;
+}
+.a {
+  color: blue;
+  list-style: none;
+}
