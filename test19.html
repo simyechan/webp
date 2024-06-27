@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <div id="itemDiv">
+      <input type="text" id="subject" />
+      <button onclick="newRegister();">추가</button>
+      <button onclick="deleteList();">삭제</button>
+    </div>
+    <ul id="itemList"></ul>
+    <script>
+      function newRegister() {
+        var newItem = document.createElement("li");
+        var subject = document.querySelector("#subject");
+        var newText = document.createTextNode(subject.value);
+        newItem.appendChild(newText);
+
+        var itemList = document.querySelector("#itemList");
+        // itemList.appendChild(newItem);
+        itemList.insertBefore(newItem, itemList.childNodes[0]);
+
+        subject.value = "";
+      }
+
+      function deleteList() {
+        var itemList = document.querySelector("#itemList");
+        // if (itemList.firstChild) {
+        //   itemList.removeChild(itemList.firstChild);
+        // }
+        if (itemList.lastChild) {
+          itemList.removeChild(itemList.lastChild);
+        }
+      }
+    </script>
+  </body>
+</html>
